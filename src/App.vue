@@ -1,9 +1,13 @@
 <script setup>
+import { useRouter } from 'vue-router';
 import HeroSection from './components/HeroSection.vue'
 import SkillsSection from './components/SkillsSection.vue'
 import ExperienceSection from './components/ExperienceSection.vue'
 import EducationSection from './components/EducationSection.vue'
 import ContactSection from './components/ContactSection.vue'
+
+// Get router instance
+const router = useRouter();
 
 // Function for smooth scrolling using router
 const scrollToSection = (sectionId) => {

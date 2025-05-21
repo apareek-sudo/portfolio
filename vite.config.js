@@ -6,6 +6,8 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // Base URL configuration to handle different deployment platforms
+  base: process.env.DEPLOY_TARGET === 'gh-pages' ? '/portfolio/' : '/',
   plugins: [
     vue(),
     vueDevTools(),
